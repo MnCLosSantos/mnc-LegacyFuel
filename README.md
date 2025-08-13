@@ -1,7 +1,7 @@
 # mnc-LegacyFuel
 # LegacyFuel
 
-**LegacyFuel** is a simple, lightweight fuel system resource for FiveM. Initially developed by *InZidiuZ*, the script provides realistic fuel consumption mechanics suitable for GTA V roleplay servers. :contentReference[oaicite:0]{index=0}
+**LegacyFuel** is a simple, lightweight fuel system resource for FiveM. Initially developed by *InZidiuZ*, the script provides realistic fuel consumption mechanics suitable for GTA V roleplay servers.
 
 ---
 
@@ -14,13 +14,13 @@
 - Usage of Jerry cans (gas can items) to refuel  
 - Server-side synchronization of fuel levels  
 - Optimized for low CPU usage  
-- Optional randomized starting fuel for NPC/spawned vehicles :contentReference[oaicite:2]{index=2}  
+- Optional randomized starting fuel for NPC/spawned vehicles 
 
 ---
 
 ##  Installation
 
-1. **Download** the latest version from the **Code** tab on the GitHub repository. :contentReference[oaicite:3]{index=3}  
+1. **Download** the latest version from the **Code** tab on the GitHub repository.
 2. **Move** the `LegacyFuel` folder into your server’s `resources` directory.  
 3. **Configure** settings in the `config.lua` (e.g., enable blips, adjust fuel settings).  
 4. **Add** the following line to your `server.cfg`:
@@ -41,7 +41,7 @@ All behavior can be tweaked via `config.lua`. For example, you may:
 - Adjust fuel consumption rate  
 - Set specific behavior for engine failure or low fuel  
 
-These match the original design intentions and flexibility shown in community conversations. :contentReference[oaicite:4]{index=4}
+These match the original design intentions and flexibility shown in community conversations.
 
 ---
 
