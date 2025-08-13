@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    background: transparent;
+}
+
+.fuel-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.95), rgba(20, 20, 20, 0.98));
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    padding: 24px;
+    min-width: 320px;
+    max-width: 400px;
+    animation: slideIn 0.3s ease-out;
+}
+
+.fuel-container.hidden {
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.fuel-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.fuel-header h2 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.fuel-info {
+    margin-bottom: 20px;
+}
+
+.fuel-level {
+    margin-bottom: 20px;
+}
+
+.fuel-label {
+    color: #b0b0b0;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.fuel-percentage {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.fuel-bar {
+    width: 100%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fuel-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff4444, #ffaa00, #44ff44);
+    border-radius: 6px;
+    width: 0%;
+    transition: width 0.5s ease-out;
+    box-shadow: 0 0 10px rgba(68, 255, 68, 0.5);
+}
+
+.cost-info {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cost-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.cost-row:last-child {
+    margin-bottom: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 8px;
+    margin-top: 8px;
+}
+
+.cost-label {
+    color: #b0b0b0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cost-value {
+    color: #44ff44;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(68, 255, 68, 0.3);
+}
+
+.fuel-actions {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.action-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.key-hint {
+    background: linear-gradient(135deg, #4a5568, #2d3748);
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.jerry-can-info {
+    background: rgba(100, 50, 0, 0.2);
+    border: 1px solid rgba(255, 165, 0, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.jerry-can-info.hidden {
+    display: none;
+}
+
+.jerry-can-level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jerry-label {
+    color: #ffaa00;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.jerry-percentage {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Pulse animation for active refueling */
+.fuel-container.refueling {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+    50% {
+        box-shadow: 0 20px 40px rgba(68, 255, 68, 0.3);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .fuel-container {
+        min-width: 280px;
+        padding: 20px;
+    }
+    
+    .fuel-percentage {
+        font-size: 20px;
+    }
+    
+    .cost-value {
+        font-size: 14px;
+    }
+}

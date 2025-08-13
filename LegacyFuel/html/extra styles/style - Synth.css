@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+    background: linear-gradient(180deg, #0d0028, #1a0033 80%);
+}
+
+.fuel-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(20, 0, 40, 0.85);
+    border-radius: 16px;
+    border: 2px solid #ff00ff;
+    box-shadow:
+        0 0 20px #ff00ff,
+        0 0 40px #00ffff inset,
+        0 0 80px rgba(0, 255, 255, 0.3);
+    padding: 24px;
+    min-width: 320px;
+    max-width: 400px;
+    animation: slideIn 0.3s ease-out;
+}
+
+.fuel-container.hidden {
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.fuel-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.fuel-header h2 {
+    color: #00ffff;
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow:
+        0 0 5px #00ffff,
+        0 0 15px #00ffff,
+        0 0 30px #00ffff;
+}
+
+.fuel-info {
+    margin-bottom: 20px;
+}
+
+.fuel-level {
+    margin-bottom: 20px;
+}
+
+.fuel-label {
+    color: #ff00ff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    text-shadow:
+        0 0 5px #ff00ff,
+        0 0 15px #ff00ff;
+}
+
+.fuel-percentage {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 12px;
+    text-shadow:
+        0 0 5px #ff00ff,
+        0 0 20px #00ffff,
+        0 0 40px #ff00ff;
+}
+
+.fuel-bar {
+    width: 100%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: inset 0 0 10px #00ffff;
+}
+
+.fuel-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff00ff, #ff9900, #00ffff);
+    border-radius: 6px;
+    width: 0%;
+    transition: width 0.5s ease-out;
+    box-shadow:
+        0 0 10px #ff00ff,
+        0 0 20px #00ffff,
+        0 0 30px #ff9900;
+}
+
+.cost-info {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid rgba(255, 0, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+}
+
+.cost-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.cost-row:last-child {
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 255, 255, 0.3);
+    padding-top: 8px;
+    margin-top: 8px;
+}
+
+.cost-label {
+    color: #ff00ff;
+    font-size: 14px;
+    font-weight: 500;
+    text-shadow: 0 0 8px #ff00ff;
+}
+
+.cost-value {
+    color: #00ffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow:
+        0 0 6px #00ffff,
+        0 0 15px #00ffff;
+}
+
+.fuel-actions {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.action-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    text-shadow:
+        0 0 5px #ff00ff,
+        0 0 15px #00ffff;
+}
+
+.key-hint {
+    background: rgba(255, 0, 255, 0.2);
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.jerry-can-info {
+    background: rgba(255, 0, 255, 0.1);
+    border: 1px solid rgba(255, 0, 255, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+}
+
+.jerry-can-info.hidden {
+    display: none;
+}
+
+.jerry-can-level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jerry-label {
+    color: #ff00ff;
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: 0 0 8px #ff00ff;
+}
+
+.jerry-percentage {
+    color: #00ffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: 0 0 8px #00ffff;
+}
+
+.fuel-container.refueling {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff inset;
+    }
+    50% {
+        box-shadow: 0 0 40px #00ffff, 0 0 60px #ff00ff inset;
+    }
+}
+
+@media (max-width: 480px) {
+    .fuel-container {
+        min-width: 280px;
+        padding: 20px;
+    }
+    
+    .fuel-percentage {
+        font-size: 20px;
+    }
+    
+    .cost-value {
+        font-size: 14px;
+    }
+}

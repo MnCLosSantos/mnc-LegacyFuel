@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Station</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="fuel-ui" class="fuel-container hidden">
+        <div class="fuel-header">
+            <h2>⛽ Refueling</h2>
+        </div>
+        <div class="fuel-info">
+            <div class="fuel-level">
+			     <div class="cost-row">
+                    <span class="cost-label">Price Per:</span>
+                    <span class="cost-value" id="total-cost">$0.00</span>
+                </div>
+                <div class="fuel-label">Fuel Level</div>
+                <div class="fuel-percentage" id="fuel-percentage">0%</div>
+                <div class="fuel-bar">
+                    <div class="fuel-fill" id="fuel-fill"></div>
+                </div>
+            </div>
+            
+            <div class="cost-info">
+                <div class="cost-row">
+                    <span class="cost-label">Current Cost:</span>
+                    <span class="cost-value" id="current-cost">$0.00</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="fuel-actions">
+            <div class="action-hint">
+                <span class="key-hint">[E]</span>
+                <span>Stop Refueling</span>
+            </div>
+        </div>
+        
+        <div class="jerry-can-info hidden" id="jerry-can-info">
+            <div class="jerry-can-level">
+                <span class="jerry-label">Jerry Can:</span>
+                <span class="jerry-percentage" id="jerry-percentage">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
