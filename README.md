@@ -4,7 +4,7 @@
 **LegacyFuel** is a simple, lightweight fuel system resource for FiveM. Initially developed by *InZidiuZ*, the script provides realistic fuel consumption mechanics suitable for GTA V roleplay servers.
 
 
-## To change ui simple replcae contents of style.css with the contents of the one you like.
+## To change ui simple replace contents of style.css with the contents of the one you like.
 - style - NPX
 <img width="1920" height="1080" alt="FiveM® by Cfx re - Midnight Club Los Santo's 13_08_2025 05_00_01" src="https://github.com/user-attachments/assets/b28033e3-673a-4f26-adb6-9f8659237189" />
 
