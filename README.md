@@ -1,5 +1,5 @@
 # mnc-LegacyFuel
-# LegacyFuel
+# LegacyFuel is...
 
 **LegacyFuel** is a simple, lightweight fuel system resource for FiveM. Initially developed by *InZidiuZ*, the script provides realistic fuel consumption mechanics suitable for GTA V roleplay servers.
 
