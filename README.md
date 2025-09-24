@@ -59,11 +59,7 @@ These match the original design intentions and flexibility shown in community co
 
 ---
 
-##  Exports
-
-Use the following client-side exports from other scripts:
-
-```lua
-exports["LegacyFuel"]:SetFuel(vehicle, value)  -- Set fuel level (0–100)
-exports["LegacyFuel"]:GetFuel(vehicle)          -- Retrieve current fuel level
+## 📞 Support & Community
+[![Discord](https://img.shields.io/badge/Discord-Join%20Server-7289da?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/aTBsSZe5C6)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YourRepositories)
 
